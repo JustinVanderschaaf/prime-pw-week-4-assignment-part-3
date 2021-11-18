@@ -12,7 +12,15 @@ function addItem(item) {
   } else return false;
 }
 //END creating basket with empty array and a function to add items to array
-
+//creating function to check if basket is full
+function isFull() {
+  if (basket.length < maxItems) {
+    return false;
+  } else if (basket.length >= maxItems) {
+    return true;
+  }
+}
+//END creating function to check if basket is full
 //Test to add items to basket array
 console.log(addItem("pizza"));
 console.log(addItem("bread"));
@@ -35,4 +43,25 @@ function empty() {
 empty();
 //End sets basket back to an empty array
 
-
+//Testing if basket empties and can be refilled
+console.log(basket);
+console.log(addItem("pizza"));
+console.log(addItem("bread"));
+console.log(addItem(""));
+console.log(addItem("milk"));
+console.log(addItem("peas"));
+console.log(basket);
+listItems();
+//END Testing if basket empties and can be refilled
+//Using test code from assignment
+console.log(`Basket is ${basket}`);
+console.log("Adding apples (expect true)", addItem("apples"));
+console.log(`Basket is now ${basket}`);
+//END test code from assignment
+//test if function isFull works
+console.log(isFull());
+//Checking if basket being full returns false and dose not add
+console.log(`Basket is ${basket}`);
+console.log("Adding oranges (expect false)", addItem("oranges"));
+console.log(`Basket is now ${basket}`);
+//END Checking if basket being full returns false and dose not add
