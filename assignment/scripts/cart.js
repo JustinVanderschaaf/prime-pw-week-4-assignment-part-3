@@ -13,3 +13,26 @@ function addItem(item) {
 }
 //END creating basket with empty array and a function to add items to array
 
+//Test to add items to basket array
+console.log(addItem("pizza"));
+console.log(addItem("bread"));
+console.log(addItem(""));
+console.log(addItem("milk"));
+console.log(basket);
+//end test to add items to basket array
+
+//function to list items on their own line
+function listItems() {
+  for (i = 0; i < basket.length; i++) console.log(basket[i]);
+}
+listItems();
+//End function to list items on their own line
+//Sets basket back to an empty array
+function empty() {
+  return (basket = []);
+}
+
+empty();
+//End sets basket back to an empty array
+
+
