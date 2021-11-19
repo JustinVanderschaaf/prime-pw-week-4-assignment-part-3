@@ -31,7 +31,7 @@ console.log(basket);
 
 //function to list items on their own line
 function listItems() {
-  for (i = 0; i < basket.length; i++) console.log(basket[i]);
+  for (let i = 0; i < basket.length; i++) console.log(basket[i]);
 }
 listItems();
 //End function to list items on their own line
@@ -49,7 +49,7 @@ console.log(addItem("pizza"));
 console.log(addItem("bread"));
 console.log(addItem(""));
 console.log(addItem("milk"));
-console.log(addItem("peas"));
+console.log(addItem("milk"));
 console.log(basket);
 listItems();
 //END Testing if basket empties and can be refilled
@@ -65,3 +65,17 @@ console.log(`Basket is ${basket}`);
 console.log("Adding oranges (expect false)", addItem("oranges"));
 console.log(`Basket is now ${basket}`);
 //END Checking if basket being full returns false and dose not add
+
+//Creating function to remove item
+
+function removeItem(item) {
+  index = basket.indexOf(item);
+  if (index > -1) {
+    return basket.splice(index, 1);
+  }
+  return null;
+}
+
+console.log(removeItem("milk"));
+console.log(basket);
+//End function to remove item
